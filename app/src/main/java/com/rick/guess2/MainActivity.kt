@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
     val secretNumber = SecretNumber()
-    var TAG = "MainActivity"
+    var TAG = MainActivity ::class.java.simpleName
 
     lateinit var edNumber : EditText
 
@@ -28,20 +28,20 @@ class MainActivity : AppCompatActivity() {
     fun check(view : View){
         val n = edNumber.text.toString().toInt()
         val diff = secretNumber.validate(n)
-        var message = "Yes, you got it"
+        var message = getString(R.string.yes_you_got_it)
 //        println("number: $n")
         Log.d(TAG, "number: $n")
 
         if (diff < 0){
-            message = "Bigger"
+            message = getString(R.string.bigger)
         }else if (diff > 0){
-            message = "Smaller"
+            message = getString(R.string.smaller)
         }
 //        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
         AlertDialog.Builder(this)
-            .setTitle("Message")
+            .setTitle(getString(R.string.dialog_title))
             .setMessage(message)
-            .setPositiveButton("ok", null)
+            .setPositiveButton(getString(R.string.ok), null)
             .show()
     }
 }
