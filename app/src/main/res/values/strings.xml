@@ -6,4 +6,8 @@
     <string name="bigger">Bigger</string>
     <string name="smaller">Smaller</string>
     <string name="dialog_title">Message</string>
+    <string name="title_activity_material">MaterialActivity</string>
+    <string name="replay_game">Replay game</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
     val secretNumber = SecretNumber()
-    var TAG = MainActivity ::class.java.simpleName
+    val TAG = MainActivity ::class.java.simpleName
 
     lateinit var edNumber : EditText
 
